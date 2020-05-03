@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./card.css";
 class Card extends Component {
   render() {
+    const { culoare, numar, text } = this.props;
+
     const stil = {
       width: "80%",
       height: "40px",
@@ -12,8 +14,6 @@ class Card extends Component {
     const stil1 = {
       color: "#888",
     };
-
-    const { culoare, numar, text } = this.props;
 
     return (
       <div className="card text-center h-100">

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Nav from "./nav";
-import Card from "./card";
+import ListaCarduri from "./listacarduri";
 import ListaSel from "./listasel";
 import "./App.css";
 
