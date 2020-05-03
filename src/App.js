@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Nav from "./nav";
+import Card from "./card";
+import ListaSel from "./listasel";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    const listaJud = ["Alba", "Argeș", "Arad", "Bacău", "Bihor"];
+
+    return (
+      <>
+        <Nav />
+        <div className="container">
+          <div className="row pt-5">
+            <div className="col-sm-2">
+              <Card
+                culoare="bg-primary"
+                numar="31.517"
+                text="Înscriși pe liste permanente și speciale"
+              />
+            </div>
+          </div>
+
+          <div className="row pt-5">
+            <div className="col-sm-3">
+              <ListaSel eticheta="JUDETE" nume="jud" lista={listaJud} />
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
 }
 
 export default App;
